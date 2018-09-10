@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquicklinearlayout.cpp -->
+  <title>GridLayout QML Type | Qt Quick 5.11</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td ><a href="../qtdoc/index.html">Qt 5.11</a></td><td ><a href="qtquick-index.html">Qt Quick</a></td><td ><a href="qtquick-qmlmodule.html">QML Types</a></td><td >GridLayout QML Type</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.11.1 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+  <h3><a name="toc">Contents （目录）</a></h3>
+  <ul>
+    <li class="level1"><a href="#properties">Properties （属性）</a></li>
+    <li class="level1"><a href="#details">Detailed Description （详细说明）</a></li>
+  </ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">GridLayout QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$GridLayout-brief -->
+<p>Provides a way of dynamically arranging items in a grid. <a href="#details">More...</a></p>
+提供一种动态排列网格中项目的方法。<a href="#details">更多...</a><!-- @@@GridLayout -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQuick.Layouts 1.11</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-qtquick-item.html">Item</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-qtquick-layouts-gridlayout-members.html">List of all members, including inherited members</a></li>
+<li><a href="qml-qtquick-layouts-gridlayout-members.html">所有成员的列表，包括继承的成员</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick-layouts-gridlayout.html#columnSpacing-prop">columnSpacing</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-qtquick-layouts-gridlayout.html#columns-prop">columns</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-qtquick-layouts-gridlayout.html#flow-prop">flow</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="qml-qtquick-layouts-gridlayout.html#layoutDirection-prop">layoutDirection</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="qml-qtquick-layouts-gridlayout.html#rowSpacing-prop">rowSpacing</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-qtquick-layouts-gridlayout.html#rows-prop">rows</a></b></b> : int</li>
+</ul>
+<!-- $$$GridLayout-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>If the <a href="qml-qtquick-layouts-gridlayout.html">GridLayout</a> is resized, all items in the layout will be rearranged. It is similar to the widget-based <a href="../qtwidgets/qgridlayout.html">QGridLayout</a>. All visible children of the <a href="qml-qtquick-layouts-gridlayout.html">GridLayout</a> element will belong to the layout. If you want a layout with just one row or one column, you can use the <a href="qml-qtquick-layouts-rowlayout.html">RowLayout</a> or <a href="qml-qtquick-layouts-columnlayout.html">ColumnLayout</a>. These offer a bit more convenient API, and improve readability.</p>
+<p>By default items will be arranged according to the <a href="qtquick-positioning-layouts.html#flow">flow</a> property. The default value of the <a href="qtquick-positioning-layouts.html#flow">flow</a> property is <code>GridLayout.LeftToRight</code>.</p>
+<p>If the <a href="qml-qtquick-layouts-gridlayout.html#columns-prop">columns</a> property is specified, it will be treated as a maximum limit of how many columns the layout can have, before the auto-positioning wraps back to the beginning of the next row. The <a href="qml-qtquick-layouts-gridlayout.html#columns-prop">columns</a> property is only used when <a href="qtquick-positioning-layouts.html#flow">flow</a> is <code>GridLayout.LeftToRight</code>.</p>
+<p>如果调整<a href="qml-qtquick-layouts-gridlayout.html">GridLayout</a>的大小，布局中的所有项目都将重新排列。它类似于基于小部件的<a href="../qtwidgets/qgridlayout.html">QGridLayout</a>。<a href="qml-qtquick-layouts-gridlayout.html">GridLayout</a>元素的所有可见子元素都属于布局。如果您想要只有一行或一列的布局，可以使用<a href="qml-qtquick-layouts-rowlayout.html">RowLayout</a>或<a href="qml-qtquick-layouts-columnlayout.html">ColumnLayout</a>。这些提供了更方便的API，并提高了可读性。</p>
+<p>默认情况下，将根据<a href="qtquick-positioning-layouts.html#flow">flow</a>属性排列项目。<a href="qtquick-positioning-layouts.html#flow">flow</a>属性的默认值是GridLayout.LeftToRight。</p>
+<p>如果指定了<a href="qml-qtquick-layouts-gridlayout.html#columns-prop">columns</a>属性，则在自动定位回绕到下一行的开头之前，它将被视为布局可以具有的列数的最大限制。该<a href="qml-qtquick-layouts-gridlayout.html#columns-prop">列</a>在属性仅使用<a href="qtquick-positioning-layouts.html#flow">流量</a>是GridLayout.LeftToRight。</p>
+<p class="centerAlign"><img src="images/gridlayout.png" alt="" /></p><pre class="cpp">
+
+  GridLayout {
+      id: grid
+      columns: <span class="number">3</span>
+
+      Text { text: <span class="string">&quot;Three&quot;</span>; font<span class="operator">.</span>bold: <span class="keyword">true</span>; }
+      Text { text: <span class="string">&quot;words&quot;</span>; color: <span class="string">&quot;red&quot;</span> }
+      Text { text: <span class="string">&quot;in&quot;</span>; font<span class="operator">.</span>underline: <span class="keyword">true</span> }
+      Text { text: <span class="string">&quot;a&quot;</span>; font<span class="operator">.</span>pixelSize: <span class="number">20</span> }
+      Text { text: <span class="string">&quot;row&quot;</span>; font<span class="operator">.</span>strikeout: <span class="keyword">true</span> }
+  }
+
+</pre>
+<p>The <a href="qml-qtquick-layouts-gridlayout.html#rows-prop">rows</a> property works in a similar way, but items are auto-positioned vertically. The <a href="qml-qtquick-layouts-gridlayout.html#rows-prop">rows</a> property is only used when <a href="qtquick-positioning-layouts.html#flow">flow</a> is <code>GridLayout.TopToBottom</code>.</p>
+<p>You can specify which cell you want an item to occupy by setting the <a href="qml-qtquick-layouts-layout.html#row-attached-prop">Layout.row</a> and <a href="qml-qtquick-layouts-layout.html#column-attached-prop">Layout.column</a> properties. You can also specify the row span or column span by setting the <a href="qml-qtquick-layouts-layout.html#rowSpan-attached-prop">Layout.rowSpan</a> or <a href="qml-qtquick-layouts-layout.html#columnSpan-attached-prop">Layout.columnSpan</a> properties.</p>
+<p>该<a href="qml-qtquick-layouts-gridlayout.html#rows-prop">行</a>物业工作以类似的方式，但项目是自动垂直放置。该<a href="qml-qtquick-layouts-gridlayout.html#rows-prop">行</a>当时的物业仅用于<a href="qtquick-positioning-layouts.html#flow">流量</a>是GridLayout.TopToBottom。</p>
+<p>您可以通过设置<a href="qml-qtquick-layouts-layout.html#row-attached-prop">Layout.row</a>和<a href="qml-qtquick-layouts-layout.html#column-attached-prop">Layout.column</a>属性来指定要占用项目的单元格。您还可以通过设置<a href="qml-qtquick-layouts-layout.html#rowSpan-attached-prop">Layout.rowSpan</a>或<a href="qml-qtquick-layouts-layout.html#columnSpan-attached-prop">Layout.columnSpan</a>属性来指定行跨度或列跨度。</p>
+<p>Items in a <a href="qml-qtquick-layouts-gridlayout.html">GridLayout</a> support these attached properties:</p>
+<a href="qml-qtquick-layouts-gridlayout.html">GridLayout中的</a>项目支持这些附加属性：
+<ul>
+  <li><a href="qml-qtquick-layouts-layout.html#row-attached-prop">Layout.row</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#column-attached-prop">Layout.column</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#rowSpan-attached-prop">Layout.rowSpan</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#columnSpan-attached-prop">Layout.columnSpan</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#minimumWidth-attached-prop">Layout.minimumWidth</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#minimumHeight-attached-prop">Layout.minimumHeight</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#preferredWidth-attached-prop">Layout.preferredWidth</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#preferredHeight-attached-prop">Layout.preferredHeight</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#maximumWidth-attached-prop">Layout.maximumWidth</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#maximumHeight-attached-prop">Layout.maximumHeight</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#fillWidth-attached-prop">Layout.fillWidth</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#fillHeight-attached-prop">Layout.fillHeight</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#alignment-attached-prop">Layout.alignment</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#margins-attached-prop">Layout.margins</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#topMargin-attached-prop">Layout.leftMargin</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#rightMargin-attached-prop">Layout.rightMargin</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#topMargin-attached-prop">Layout.topMargin</a></li>
+<li><a href="qml-qtquick-layouts-layout.html#bottomMargin-attached-prop">Layout.bottomMargin</a></li>
+</ul>
+<p>Read more about attached properties <a href="../qtqml/qtqml-syntax-objectattributes.html">here</a>.</p>
+<p><b>See also </b><a href="qml-qtquick-layouts-rowlayout.html">RowLayout</a>, <a href="qml-qtquick-layouts-columnlayout.html">ColumnLayout</a>, and <a href="qtquick-positioning-layouts.html#grid">Grid</a>.</p>
+<p>了解更多关于附加属性<a href="../qtqml/qtqml-syntax-objectattributes.html">在这里</a>。</p>
+<p><strong>另请参见</strong><a href="qml-qtquick-layouts-rowlayout.html">RowLayout</a>，<a href="qml-qtquick-layouts-columnlayout.html">ColumnLayout</a>和<a href="qtquick-positioning-layouts.html#grid">Grid</a>。</p>
+<!-- @@@GridLayout -->
+<h2>Property Documentation （属性说明）</h2>
+<!-- $$$columnSpacing -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="columnSpacing-prop">
+<td class="tblQmlPropNode"><p>
+<a name="columnSpacing-prop"></a><span class="name">columnSpacing</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>This property holds the spacing between each column. The default value is <code>5</code>.</p>
+  此属性保存每列之间的间距。默认值为5。</div></div><!-- @@@columnSpacing -->
+<br/>
+<!-- $$$columns -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="columns-prop">
+<td class="tblQmlPropNode"><p>
+<a name="columns-prop"></a><span class="name">columns</span> : <span class="type"><a href="../qtqml/qml-int.html">int</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>This property holds the column limit for items positioned if <a href="qtquick-positioning-layouts.html#flow">flow</a> is <code>GridLayout.LeftToRight</code>. The default value is that there is no limit.</p>
+  如果为<a href="qtquick-positioning-layouts.html#flow">flow，</a>则此属性保存已定位项目的列限制GridLayout.LeftToRight。默认值是没有限制。</div></div><!-- @@@columns -->
+<br/>
+<!-- $$$flow -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="flow-prop">
+<td class="tblQmlPropNode"><p>
+<a name="flow-prop"></a><span class="name">flow</span> : <span class="type"><a href="../qtqml/qml-enumeration.html">enumeration</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>This property holds the flow direction of items that does not have an explicit cell position set. It is used together with the <a href="qml-qtquick-layouts-gridlayout.html#columns-prop">columns</a> or <a href="qml-qtquick-layouts-gridlayout.html#rows-prop">rows</a> property, where they specify when flow is reset to the next row or column respectively.</p>
+<p>Possible values are:</p>
+<ul>
+<li><a href="qml-qtquick-layouts-gridlayout.html">GridLayout</a>.LeftToRight (default) - Items are positioned next to each other, then wrapped to the next line.</li>
+<li><a href="qml-qtquick-layouts-gridlayout.html">GridLayout</a>.TopToBottom - Items are positioned next to each other from top to bottom, then wrapped to the next column.</li>
+</ul>
+<p><b>See also </b><a href="qml-qtquick-layouts-gridlayout.html#rows-prop">rows</a> and <a href="qml-qtquick-layouts-gridlayout.html#columns-prop">columns</a>.</p>
+<p>此属性保存未设置显式单元格位置的项目的流向。它与<a href="qml-qtquick-layouts-gridlayout.html#columns-prop">列</a>或<a href="qml-qtquick-layouts-gridlayout.html#rows-prop">行</a>属性一起使用，它们指定何时将流重置为下一行或列。</p>
+<p>可能的值是：</p>
+<ul>
+  <li><a href="qml-qtquick-layouts-gridlayout.html">GridLayout</a> .LeftToRight（默认值） - 项目彼此相邻，然后换行到下一行。</li>
+  <li><a href="qml-qtquick-layouts-gridlayout.html">GridLayout</a> .TopToBottom - 项目从上到下彼此相邻放置，然后换行到下一列。</li>
+</ul>
+<p><strong>另请参见</strong><a href="qml-qtquick-layouts-gridlayout.html#rows-prop">行</a>和<a href="qml-qtquick-layouts-gridlayout.html#columns-prop">列</a>。</p>
+</div></div><!-- @@@flow -->
+<br/>
+<!-- $$$layoutDirection -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="layoutDirection-prop">
+<td class="tblQmlPropNode"><p>
+<a name="layoutDirection-prop"></a><span class="name">layoutDirection</span> : <span class="type"><a href="../qtqml/qml-enumeration.html">enumeration</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>This property holds the layout direction of the grid layout - it controls whether items are laid out from left to right or right to left. If <code>Qt.RightToLeft</code> is specified, left-aligned items will be right-aligned and right-aligned items will be left-aligned.</p>
+<p>Possible values:</p>
+<ul>
+<li>Qt.LeftToRight (default) - Items are laid out from left to right.</li>
+<li>Qt.RightToLeft - Items are laid out from right to left.</li>
+</ul>
+<p>This QML property was introduced in  QtQuick.Layouts 1.1.</p>
+<p><b>See also </b><a href="qml-qtquick-layouts-rowlayout.html#layoutDirection-prop">RowLayout::layoutDirection</a> and <a href="qml-qtquick-layouts-columnlayout.html#layoutDirection-prop">ColumnLayout::layoutDirection</a>.</p>
+<p>此属性保存网格布局的布局方向 - 它控制项目是从左到右还是从右到左布局。如果Qt.RightToLeft指定，则左对齐项目将右对齐，右对齐项目将左对齐。</p>
+<p>可能的值：</p>
+<ul>
+  <li>Qt.LeftToRight（默认） - 项目从左到右排列。</li>
+  <li>Qt.RightToLeft - 项目从右到左排列。</li>
+</ul>
+<p>这个QML属性是在QtQuick.Layouts 1.1中引入的。</p>
+<p><strong>另请参见</strong><a href="qml-qtquick-layouts-rowlayout.html#layoutDirection-prop">RowLayout :: </a><a href="qml-qtquick-layouts-columnlayout.html#layoutDirection-prop">layoutDirection</a>和<a href="qml-qtquick-layouts-columnlayout.html#layoutDirection-prop">ColumnLayout :: layoutDirection</a>。</p>
+</div></div><!-- @@@layoutDirection -->
+<br/>
+<!-- $$$rowSpacing -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="rowSpacing-prop">
+<td class="tblQmlPropNode"><p>
+<a name="rowSpacing-prop"></a><span class="name">rowSpacing</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>This property holds the spacing between each row. The default value is <code>5</code>.</p>
+  此属性保存每行之间的间距。默认值为5。</div></div><!-- @@@rowSpacing -->
+<br/>
+<!-- $$$rows -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="rows-prop">
+<td class="tblQmlPropNode"><p>
+<a name="rows-prop"></a><span class="name">rows</span> : <span class="type"><a href="../qtqml/qml-int.html">int</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>This property holds the row limit for items positioned if <a href="qtquick-positioning-layouts.html#flow">flow</a> is <code>GridLayout.TopToBottom</code>. The default value is that there is no limit.</p>
+  如果为<a href="qtquick-positioning-layouts.html#flow">flow，</a>则此属性保存已定位项的行限制GridLayout.TopToBottom。默认值是没有限制。</div></div><!-- @@@rows -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

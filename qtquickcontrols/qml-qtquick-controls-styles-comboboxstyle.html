@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ComboBoxStyle.qml -->
+  <title>ComboBoxStyle QML Type | Qt Quick Controls 5.11</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td ><a href="../qtdoc/index.html">Qt 5.11</a></td><td ><a href="qtquickcontrols-index.html">Qt Quick Controls</a></td><td ><a href="qtquick-controls-qmlmodule.html">QML Types</a></td><td >ComboBoxStyle QML Type</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.11.1 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+  <h3><a name="toc">Contents （目录）</a></h3>
+  <ul>
+    <li class="level1"><a href="#properties">Properties （属性）</a></li>
+    <li class="level1"><a href="#details">Detailed Description （详细描述）</a></li>
+  </ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">ComboBoxStyle QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$ComboBoxStyle-brief -->
+<p>Provides custom styling for <a href="qml-qtquick-controls-combobox.html">ComboBox</a>. <a href="#details">More...</a></p>
+为<a href="qml-qtquick-controls-combobox.html">ComboBox</a>提供自定义样式。<a href="#details">更多...</a><!-- @@@ComboBoxStyle -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement （导入声明）:</td><td class="memItemRight bottomAlign"> import QtQuick.Controls.Styles 1.4</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 5.1</td></tr></table></div><ul>
+<li><a href="qml-qtquick-controls-styles-comboboxstyle-members.html">List of all members, including inherited members</a></li>
+<li><a href="qml-qtquick-controls-styles-comboboxstyle-members.html">所有成员的列表，包括继承的成员</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties （属性）</h2>
+<ul>
+  <li class="fn"><strong><strong><a href="qml-qtquick-controls-styles-comboboxstyle.html#background-prop">background</a></strong></strong> : Component （按钮的背景）</li>
+  <li class="fn"><strong><strong><a href="qml-qtquick-controls-styles-comboboxstyle.html#control-prop">control</a></strong></strong> : ComboBox （该风格管理的 comboBox （组件））</li>
+  <li class="fn"><strong><strong><a href="qml-qtquick-controls-styles-comboboxstyle.html#dropDownButtonWidth-prop">dropDownButtonWidth</a></strong></strong> : int （组合框可编辑时下拉按钮的大小）</li>
+  <li class="fn"><strong><strong><a href="qml-qtquick-controls-styles-comboboxstyle.html#font-prop">font</a></strong></strong> : font （字体）</li>
+  <li class="fn"><strong><strong><a href="qml-qtquick-controls-styles-comboboxstyle.html#label-prop">label</a></strong></strong> : Component （按钮的标签）</li>
+  <li class="fn"><strong><strong><a href="qml-qtquick-controls-styles-comboboxstyle.html#renderType-prop">renderType</a></strong></strong> : int （渲染类型）</li>
+  <li><strong><strong><a>selectedTextColor</a></strong></strong> : color （突出显示的文本颜色，用于选择）</li>
+  <li class="fn"><strong><strong><a href="qml-qtquick-controls-styles-comboboxstyle.html#selectionColor-prop">selectionColor</a></strong></strong> : color （选中后的颜色）</li>
+  <li class="fn"><strong><strong><a href="qml-qtquick-controls-styles-comboboxstyle.html#textColor-prop">textColor</a></strong></strong> : color （文字颜色）</li>
+</ul>
+<!-- $$$ComboBoxStyle-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description （详细描述）</h2>
+<!-- @@@ComboBoxStyle -->
+<h2>Property Documentation （属性文件）</h2>
+<!-- $$$background -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="background-prop">
+<td class="tblQmlPropNode"><p>
+<a name="background-prop"></a><span class="name">background</span> : <span class="type"><a href="../qtqml/qml-qtqml-component.html">Component</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>This defines the background of the button.</p>
+  这定义了按钮的背景。</div></div><!-- @@@background -->
+<br/>
+<!-- $$$control -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="control-prop">
+<td class="tblQmlPropNode"><p>
+<a name="control-prop"></a><span class="qmlreadonly">[read-only] </span><span class="name">control</span> : <span class="type"><a href="qml-qtquick-controls-combobox.html">ComboBox</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>The <a href="qml-qtquick-controls-combobox.html">ComboBox</a> this style is attached to.</p>
+  这个风格附加的<a href="qml-qtquick-controls-combobox.html">ComboBox</a>。</div></div><!-- @@@control -->
+<br/>
+<!-- $$$dropDownButtonWidth -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="dropDownButtonWidth-prop">
+<td class="tblQmlPropNode"><p>
+<a name="dropDownButtonWidth-prop"></a><span class="name">dropDownButtonWidth</span> : <span class="type"><a href="../qtqml/qml-int.html">int</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>The size of the drop down button when the combobox is editable.</p>
+  组合框可编辑时下拉按钮的大小。</div></div><!-- @@@dropDownButtonWidth -->
+<br/>
+<!-- $$$font -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="font-prop">
+<td class="tblQmlPropNode"><p>
+<a name="font-prop"></a><span class="name">font</span> : <span class="type"><a href="../qtquick/qml-font.html">font</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>The font of the control.</p>
+<p>This QML property was introduced in  QtQuick.Controls.Styles 1.3.</p>
+<p>控件的字体。</p>
+<p>这个QML属性是在QtQuick.Controls.Styles 1.3中引入的。</p>
+</div></div><!-- @@@font -->
+<br/>
+<!-- $$$label -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="label-prop">
+<td class="tblQmlPropNode"><p>
+<a name="label-prop"></a><span class="name">label</span> : <span class="type"><a href="../qtqml/qml-qtqml-component.html">Component</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>This defines the label of the button.</p>
+  这定义了按钮的标签</div></div><!-- @@@label -->
+<br/>
+<!-- $$$renderType -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="renderType-prop">
+<td class="tblQmlPropNode"><p>
+<a name="renderType-prop"></a><span class="name">renderType</span> : <span class="type"><a href="../qtqml/qml-int.html">int</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Override the default rendering type for the control.</p>
+<p>Supported render types are:</p>
+<ul>
+<li>Text.QtRendering</li>
+<li>Text.NativeRendering</li>
+</ul>
+<p>The default value is platform dependent.</p>
+<p>This QML property was introduced in  QtQuick.Controls.Styles 1.2.</p>
+<p><b>See also </b><a href="../qtquick/qml-qtquick-text.html#renderType-prop">Text::renderType</a>.</p>
+<p>覆盖控件的默认呈现类型。</p>
+<p>支持的渲染类型是：</p>
+<ul>
+  <li>Text.QtRendering</li>
+  <li>Text.NativeRendering</li>
+</ul>
+<p>默认值取决于平台。</p>
+<p>这个QML属性是在QtQuick.Controls.Styles 1.2中引入的。</p>
+<p><strong>另请参见</strong><a href="../qtquick/qml-qtquick-text.html#renderType-prop">Text :: renderType</a>。</p>
+</div></div><!-- @@@renderType -->
+<br/>
+<!-- $$$selectedTextColor -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="selectedTextColor-prop">
+<td class="tblQmlPropNode"><p>
+<a name="selectedTextColor-prop"></a><span class="name">selectedTextColor</span> : <span class="type"><a href="../qtquick/qml-color.html">color</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>The highlighted text color, used in selections.</p>
+<p>This QML property was introduced in  QtQuick.Controls.Styles 1.3.</p>
+<p>突出显示的文本颜色，用于选择。</p>
+<p>这个QML属性是在QtQuick.Controls.Styles 1.3中引入的。</p>
+</div></div><!-- @@@selectedTextColor -->
+<br/>
+<!-- $$$selectionColor -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="selectionColor-prop">
+<td class="tblQmlPropNode"><p>
+<a name="selectionColor-prop"></a><span class="name">selectionColor</span> : <span class="type"><a href="../qtquick/qml-color.html">color</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>The text highlight color, used behind selections.</p>
+<p>This QML property was introduced in  QtQuick.Controls.Styles 1.3.</p>
+<p>文本突出显示颜色，用于选择后面。</p>
+<p>这个QML属性是在QtQuick.Controls.Styles 1.3中引入的。</p>
+</div></div><!-- @@@selectionColor -->
+<br/>
+<!-- $$$textColor -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="textColor-prop">
+<td class="tblQmlPropNode"><p>
+<a name="textColor-prop"></a><span class="name">textColor</span> : <span class="type"><a href="../qtquick/qml-color.html">color</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>The text color.</p>
+<p>This QML property was introduced in  QtQuick.Controls.Styles 1.3.</p>
+<p>文字颜色。</p>
+<p>这个QML属性是在QtQuick.Controls.Styles 1.3中引入的。</p>
+</div></div><!-- @@@textColor -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

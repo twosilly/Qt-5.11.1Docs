@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- layouts.qdoc -->
+  <title>Item Positioners | Qt Quick 5.11</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td ><a href="../qtdoc/index.html">Qt 5.11</a></td><td ><a href="qtquick-index.html">Qt Quick</a></td><td >Item Positioners</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.11.1 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+  <h3><a name="toc">Contents （目录）</a></h3>
+  <ul>
+    <li class="level1"><a href="#positioners">Positioners （定位器）</a></li>
+    <li class="level2"><a href="#column">Column （列）</a></li>
+    <li class="level2"><a href="#row">Row （行）</a></li>
+    <li class="level2"><a href="#grid">Grid （网格）</a></li>
+    <li class="level2"><a href="#flow">Flow （流）</a></li>
+    <li class="level1"><a href="#other-ways-to-position-items">Other Ways to Position Items （其他定位项目的方法）</a></li>
+  </ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1>Item Positioners （物品 定位器）</h1>
+<span class="subtitle"></span>
+<!-- $$$qtquick-positioning-layouts.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>Positioner items are container items that manage the positions of items in a declarative user interface. Positioners behave in a similar way to the <a href="../qtwidgets/qtwidgets-index.html">layout managers</a> used with standard Qt widgets, except that they are also containers in their own right.</p>
+<p>Positioners make it easier to work with many items when they need to be arranged in a regular layout.</p>
+<p><a href="qtquicklayouts-index.html">Qt Quick Layouts</a> can also be used to arrange Qt Quick items in a user interface. They manage both the positions and the sizes of items on a declarative user interface, and are well suited for resizable user interfaces.</p>
+<p>定位器项是管理声明性用户界面中项的位置的容器项。定位器的行为方式与标准Qt小部件使用的<a href="../qtwidgets/qtwidgets-index.html">布局管理器（layout managers）</a>类似，只是它们本身也是容器。</p>
+<p>当需要以常规布局排列时，定位器可以更轻松地处理许多项目。</p>
+<p><a href="qtquicklayouts-index.html">Qt Quick Layouts</a>也可用于在用户界面中安排Qt Quick项目。它们在声明性用户界面上管理项目的位置和大小，非常适合可调整大小的用户界面。</p>
+<a name="positioners"></a>
+<h2 id="positioners">Positioners （定位器）</h2>
+<p>A set of standard positioners are provided in the basic set of Qt Quick graphical types:</p>
+Qt Quick图形类型的基本集中提供了一组标准定位器：
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-qtquick-layoutmirroring.html">LayoutMirroring （布局镜像）</a></p></td><td class="tblDescr"><p>Property used to mirror layout behavior （用于镜像布局行为的属性）</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-qtquick-column.html">Column （列）</a></p></td><td class="tblDescr"><p>Positions its children in a column （将其子项放在一列中）</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-qtquick-flow.html">Flow （流）</a></p></td><td class="tblDescr"><p>Positions its children side by side, wrapping as necessary （将孩子并排放置，必要时包裹）</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-qtquick-grid.html">Grid （网格）</a></p></td><td class="tblDescr"><p>Positions its children in grid formation （将孩子定位在网格形成中）</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-qtquick-positioner.html">Positioner （定位器）</a></p></td><td class="tblDescr"><p>Provides attached properties that contain details on where an item exists in a positioner （提供附加属性，其中包含有关项目在定位器中的位置的详细信息）</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-qtquick-row.html">Row（行）</a></p></td><td class="tblDescr"><p>Positions its children in a row （将孩子排成一排）</p></td></tr>
+</table></div>
+<a name="column"></a>
+<h3>Column （列）</h3>
+<div class="float-right"><p><img src="images/qml-column.png" alt="" /></p>
+</div><p><a href="qtquick-positioning-layouts.html#column">Column</a> items are used to vertically arrange items. The following example uses a Column item to arrange three <a href="qml-qtquick-rectangle.html">Rectangle</a> items in an area defined by an outer <a href="qml-qtquick-item.html">Item</a>. The <a href="qml-qtquick-column.html#spacing-prop">spacing</a> property is set to include a small amount of space between the rectangles.</p>
+<a href="qtquick-positioning-layouts.html#column">列（Column）</a>项用于垂直排列项目。以下示例使用Column&nbsp;项在外部<a href="qml-qtquick-item.html">Item</a>定义的区域中排列三个<a href="qml-qtquick-rectangle.html">Rectangle</a>项。的<a href="qml-qtquick-column.html#spacing-prop">间隔（spacing）</a>属性设置为包括的矩形之间的空间量小。
+<pre class="qml">
+
+  import QtQuick 2.0
+
+  <span class="type"><a href="qml-qtquick-item.html">Item</a></span> {
+      <span class="name">width</span>: <span class="number">310</span>; <span class="name">height</span>: <span class="number">170</span>
+
+      <span class="type"><a href="qml-qtquick-column.html">Column</a></span> {
+          <span class="name">anchors</span>.horizontalCenter: <span class="name">parent</span>.<span class="name">horizontalCenter</span>
+          <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+
+          <span class="name">spacing</span>: <span class="number">5</span>
+
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;lightblue&quot;</span>; <span class="name">radius</span>: <span class="number">10.0</span>
+                      <span class="name">width</span>: <span class="number">300</span>; <span class="name">height</span>: <span class="number">50</span>
+                      <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+                             <span class="name">font</span>.pointSize: <span class="number">24</span>; <span class="name">text</span>: <span class="string">&quot;Books&quot;</span> } }
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;gold&quot;</span>; <span class="name">radius</span>: <span class="number">10.0</span>
+                      <span class="name">width</span>: <span class="number">300</span>; <span class="name">height</span>: <span class="number">50</span>
+                      <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+                             <span class="name">font</span>.pointSize: <span class="number">24</span>; <span class="name">text</span>: <span class="string">&quot;Music&quot;</span> } }
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;lightgreen&quot;</span>; <span class="name">radius</span>: <span class="number">10.0</span>
+                      <span class="name">width</span>: <span class="number">300</span>; <span class="name">height</span>: <span class="number">50</span>
+                      <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+                             <span class="name">font</span>.pointSize: <span class="number">24</span>; <span class="name">text</span>: <span class="string">&quot;Movies&quot;</span> } }
+      }
+  }
+
+</pre>
+<p>Note that, since Column inherits directly from Item, any background color must be added to a parent Rectangle, if desired.</p>
+请注意，由于Column直接从Item继承，因此如果需要，必须将任何背景颜色添加到父Rectangle。<a name="row"></a>
+<h3>Row （行）</h3>
+<div class="float-right"><p><img src="images/qml-row.png" alt="" /></p>
+</div><p><a href="qtquick-positioning-layouts.html#row">Row</a> items are used to horizontally arrange items. The following example uses a Row item to arrange three rounded <a href="qml-qtquick-rectangle.html">Rectangle</a> items in an area defined by an outer colored Rectangle. The <a href="qml-qtquick-row.html#spacing-prop">spacing</a> property is set to include a small amount of space between the rectangles.</p>
+<p>We ensure that the parent Rectangle is large enough so that there is some space left around the edges of the horizontally centered Row item.</p>
+<p><a>行（Row）</a>项目用于水平排列项目。以下示例使用Row&nbsp;项在由外部颜色Rectangle定义的区域中排列三个圆角<a>矩形（Rectangle）</a>项。的<a>间隔（spacing）</a>属性设置为包括的矩形之间的空间量小。</p>
+<p>我们确保父Rectangle足够大，以便在水平居中的Row项的边缘周围留下一些空间。</p>
+<pre class="qml">
+
+  import QtQuick 2.0
+
+  <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> {
+      <span class="name">width</span>: <span class="number">320</span>; <span class="name">height</span>: <span class="number">110</span>
+      <span class="name">color</span>: <span class="string">&quot;#c0c0c0&quot;</span>
+
+      <span class="type"><a href="qml-qtquick-row.html">Row</a></span> {
+          <span class="name">anchors</span>.horizontalCenter: <span class="name">parent</span>.<span class="name">horizontalCenter</span>
+          <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+
+          <span class="name">spacing</span>: <span class="number">5</span>
+
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>; <span class="name">radius</span>: <span class="number">20.0</span>
+                      <span class="name">color</span>: <span class="string">&quot;#024c1c&quot;</span> }
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>; <span class="name">radius</span>: <span class="number">20.0</span>
+                      <span class="name">color</span>: <span class="string">&quot;#42a51c&quot;</span> }
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>; <span class="name">radius</span>: <span class="number">20.0</span>
+                      <span class="name">color</span>: <span class="string">&quot;white&quot;</span> }
+      }
+  }
+
+</pre>
+<a name="grid"></a>
+<h3>Grid (网格)</h3>
+<div class="float-right"><p><img src="images/qml-grid-spacing.png" alt="" /></p>
+</div><p><a href="qtquick-positioning-layouts.html#grid">Grid</a> items are used to place items in a grid or table arrangement. The following example uses a Grid item to place four <a href="qml-qtquick-rectangle.html">Rectangle</a> items in a 2-by-2 grid. As with the other positioners, the spacing between items can be specified using the <a href="qml-qtquick-grid.html#spacing-prop">spacing</a> property.</p>
+<a href="qtquick-positioning-layouts.html#grid">网格</a>项用于将项目放置在网格或表格排列中。以下示例使用Grid项将4个<a href="qml-qtquick-rectangle.html">Rectangle</a>项放在2 x 2网格中。与其他定位器一样，可以使用<a href="qml-qtquick-grid.html#spacing-prop">spacing</a>属性指定项之间的<a href="qml-qtquick-grid.html#spacing-prop">间距</a>。
+<pre class="qml">
+
+  import QtQuick 2.0
+
+  <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> {
+      <span class="name">width</span>: <span class="number">112</span>; <span class="name">height</span>: <span class="number">112</span>
+      <span class="name">color</span>: <span class="string">&quot;#303030&quot;</span>
+
+      <span class="type"><a href="qml-qtquick-grid.html">Grid</a></span> {
+          <span class="name">anchors</span>.horizontalCenter: <span class="name">parent</span>.<span class="name">horizontalCenter</span>
+          <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+          <span class="name">columns</span>: <span class="number">2</span>
+          <span class="name">spacing</span>: <span class="number">6</span>
+
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;#aa6666&quot;</span>; <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span> }
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;#aaaa66&quot;</span>; <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span> }
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;#9999aa&quot;</span>; <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span> }
+          <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;#6666aa&quot;</span>; <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span> }
+      }
+  }
+
+</pre>
+<p>There is no difference between horizontal and vertical spacing inserted between items, so any additional space must be added within the items themselves.</p>
+<p>Any empty cells in the grid must be created by defining placeholder items at the appropriate places in the Grid definition.</p>
+<p>在项目之间插入的水平和垂直间距之间没有区别，因此必须在项目本身内添加任何额外的空间。</p>
+<p>必须通过在网格定义中的适当位置定义占位符项来创建网格中的任何空单元格。</p>
+<a name="flow"></a>
+<h3>Flow （流）</h3>
+<div class="float-right"><p><img src="images/qml-flow-text1.png" alt="" /> <img src="images/qml-flow-text2.png" alt="" /></p>
+</div><p><a href="qtquick-positioning-layouts.html#flow">Flow</a> items are used to place items like words on a page, with rows or columns of non-overlapping items.</p>
+<p>Flow items arrange items in a similar way to <a href="qtquick-positioning-layouts.html#grid">Grid</a> items, with items arranged in lines along one axis (the minor axis), and lines of items placed next to each other along another axis (the major axis). The direction of flow, as well as the spacing between items, are controlled by the <a href="qml-qtquick-flow.html#flow-prop">flow</a> and <a href="qml-qtquick-flow.html#spacing-prop">spacing</a> properties.</p>
+<p>The following example shows a Flow item containing a number of <a href="qml-qtquick-text.html">Text</a> child items. These are arranged in a similar way to those shown in the screenshots.</p>
+<p><a href="qtquick-positioning-layouts.html#flow">流</a>项目用于在页面上放置单词等项目，包含非重叠项目的行或列。</p>
+<p>流项目以与<a href="qtquick-positioning-layouts.html#grid">网格</a>项目类似的方式排列项目，项目沿一个轴（短轴）排列成行，并且项目行沿另一个轴（主轴）彼此相邻放置。流动方向以及物品之间的间距由<a href="qml-qtquick-flow.html#flow-prop">流动</a>和<a href="qml-qtquick-flow.html#spacing-prop">间隔</a>属性控制。</p>
+<p>以下示例显示包含许多<a href="qml-qtquick-text.html">Text</a>子项的Flow 项。它们的排列方式与屏幕截图中显示的方式类似。</p>
+<pre class="qml">
+
+  import QtQuick 2.0
+
+  <span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> {
+      <span class="name">color</span>: <span class="string">&quot;lightblue&quot;</span>
+      <span class="name">width</span>: <span class="number">300</span>; <span class="name">height</span>: <span class="number">200</span>
+
+      <span class="type"><a href="qml-qtquick-flow.html">Flow</a></span> {
+          <span class="name">anchors</span>.fill: <span class="name">parent</span>
+          <span class="name">anchors</span>.margins: <span class="number">4</span>
+          <span class="name">spacing</span>: <span class="number">10</span>
+
+          <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">text</span>: <span class="string">&quot;Text&quot;</span>; <span class="name">font</span>.pixelSize: <span class="number">40</span> }
+          <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">text</span>: <span class="string">&quot;items&quot;</span>; <span class="name">font</span>.pixelSize: <span class="number">40</span> }
+          <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">text</span>: <span class="string">&quot;flowing&quot;</span>; <span class="name">font</span>.pixelSize: <span class="number">40</span> }
+          <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">text</span>: <span class="string">&quot;inside&quot;</span>; <span class="name">font</span>.pixelSize: <span class="number">40</span> }
+          <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">text</span>: <span class="string">&quot;a&quot;</span>; <span class="name">font</span>.pixelSize: <span class="number">40</span> }
+          <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">text</span>: <span class="string">&quot;Flow&quot;</span>; <span class="name">font</span>.pixelSize: <span class="number">40</span> }
+          <span class="type"><a href="qml-qtquick-text.html">Text</a></span> { <span class="name">text</span>: <span class="string">&quot;item&quot;</span>; <span class="name">font</span>.pixelSize: <span class="number">40</span> }
+      }
+  }
+
+</pre>
+<p>The main differences between the Grid and Flow positioners are that items inside a Flow will wrap when they run out of space on the minor axis, and items on one line may not be aligned with items on another line if the items do not have uniform sizes. As with Grid items, there is no independent control of spacing between items and between lines of items.</p>
+Grid和Flow定位器之间的主要区别在于Flow内部的项目在短轴上用完空间时会换行，如果项目的大小不均匀，则一行上的项目可能无法与另一行上的项目对齐。与网格项目一样，项目之间和项目行之间没有独立的间距控制。<a name="other-ways-to-position-items"></a>
+<h2 id="other-ways-to-position-items">Other Ways to Position Items （其他定位项目）</h2>
+<p>There are several other ways to position items in a user interface. In addition to the basic technique of specifying their coordinates directly, they can be positioned relative to other items with <a href="qtquick-positioning-anchors.html">anchors</a>, or used with <a href="qtquick-modelviewsdata-modelview.html#qml-data-models">QML Data Models</a> such as <a href="qtquick-modelviewsdata-modelview.html#object-model">Object Model</a>.</p>
+还有其他几种在用户界面中定位项目的方法。除了直接指定其坐标的基本技术之外，它们还可以相对于具有<a href="qtquick-positioning-anchors.html">锚点的</a>其他项目<a href="qtquick-positioning-anchors.html">定位</a>，或者与<a href="qtquick-modelviewsdata-modelview.html#object-model">对象</a><a href="qtquick-modelviewsdata-modelview.html#qml-data-models">模型</a>等<a href="qtquick-modelviewsdata-modelview.html#qml-data-models">QML数据模型</a>一起使用。</div>
+<!-- @@@qtquick-positioning-layouts.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>
